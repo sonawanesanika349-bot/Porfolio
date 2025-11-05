@@ -1,0 +1,130 @@
+/* Custom Variables */
+:root {
+  --primary-color: #0d6efd;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 56px; /* For fixed navbar */
+}
+
+/* Header/Hero Section */
+header {
+  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9)),
+              url('https://source.unsplash.com/random/1920x1080/?coding') center/cover;
+  color: white;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Navigation */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* About Section */
+.about img {
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Projects Section */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contact Section */
+.form-control {
+  border: 2px solid #dee2e6;
+  padding: 0.8rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+/* Footer */
+footer .social-links a {
+  transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    min-height: 60vh;
+  }
+  
+  .display-1 {
+    font-size: 2.5rem;
+  }
+}
